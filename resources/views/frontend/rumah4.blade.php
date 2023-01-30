@@ -81,7 +81,7 @@
   </section>
 
   <br>
-  <img src="{{asset('assets2/images/rumah60.jpg')}}" height="600px" width="1270px">
+  <img src="{{asset('assets2/images/rumah60.jpg')}}" height="600px" width="1350px">
   <br><br>
   <center>
     <h1>DESAIN RUMAH</h1>

@@ -7,14 +7,16 @@
     <title>Form Promo</title>
 </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<body>
+<body style="background-image: ">
     <form>
         <div class="container">
-            <div class="card mt-5">
-                <div class="card-title">
+            <div class="card mt-5" style="background-color: #FAEBD7">
+                <div class="card-title" style="background-color:#FFE4B5">
                     <center>
                         <h3>INFO PROMO SITUTARATE RESIDENCE</h3>
                       </center>
+                      +-+-
+                      ''
                 </div>
                 <div class="card-body">
                     <div class="row">

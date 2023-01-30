@@ -11,15 +11,15 @@
 
     <form>
         <div class="container">
-            <div class="card mt-5">
-                <div class="card-title">
+            <div class="card mt-5" style="background-color: #FFEFD5">
+                <div class="card-title" style="background-color:#FFE4B5">
                     <center>
                         <h3>INFO SITUTARATE RESIDENCE</h3>
                       </center>
                 </div>
-                <div class="card-body">
+                <div class="card-body" >
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6" >
                             <div class="form-group">
                                 <label for="exampleInputNama1">Nama Pelanggan</label>
                                 <input type="text" class="form-control" id="exampleInputNama1" aria-describedby="namaHelp" placeholder="Masukan Nama">
