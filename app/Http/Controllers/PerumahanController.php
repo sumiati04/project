@@ -47,19 +47,17 @@ class PerumahanController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        // $validated = $request->validate([
-        //     'luas_rumah' => 'required',
-        //     'fasilitas_rumah' => 'required',
-        //     'harga' => 'required'
-        // ]);
-
         $perumahan = new Perumahan();
         $perumahan->luas_rumah = $request->luas_rumah;
         $perumahan->fasilitas_rumah = $request->fasilitas_rumah;
         $perumahan->harga = $request->harga;
         $perumahan->id_tipe = $request->id_tipe;
-
+        if ($request->hasfile('foto_rumah')){
+            $image = $request->file('foto_rumah');
+            $name = rand(1000, 9999) . $image->getClientOriginalName();
+            $image -> move('image/fotorumah', $name);
+            $perumahan->foto_rumah = $name;
+        }
         $perumahan->save();
         return redirect()->route('perumahan.index')->with(
             'succes',
@@ -104,12 +102,12 @@ class PerumahanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
         $validated = $request->validate([
             'luas_rumah' => 'required',
             'fasilitas_rumah' => 'required',
             'harga' => 'required',
-            'id_tipe' => 'required'
+            'id_tipe' => 'required',
+            'foto_rumah' => 'image|max:2048',
         ]);
 
         $perumahan = Perumahan::findOrFail($id);
@@ -118,6 +116,12 @@ class PerumahanController extends Controller
         $perumahan->fasilitas_rumah = $request->fasilitas_rumah;
         $perumahan->harga = $request->harga;
         $perumahan->id_tipe = $request->id_tipe;
+        if ($request->hasfile('foto_rumah')){
+            $image = $request->file('foto_rumah');
+            $name = rand(1000, 9999) . $image->getClientOriginalName();
+            $image -> move('image/fotorumah', $name);
+            $gallery->foto = $name;
+        }
         $perumahan->save();
         return redirect()->route('perumahan.index')->with(
             'succes',
@@ -133,9 +137,16 @@ class PerumahanController extends Controller
      */
     public function destroy($id)
     {
-        //
         $perumahan = Perumahan::findOrFail($id);
-        $perumahan->delete();
+        $foto = $perumahan->foto_rumah;
+        // dd($foto);
+
+        if (!Perumahan::destroy($id)){
+            return redirect()->back;
+        }
+        if ($foto){
+            $perumahan->deleteImage();
+        }
         return redirect()->route('perumahan.index')->with(
             'succes',
             'Data berhasil dihapus!'

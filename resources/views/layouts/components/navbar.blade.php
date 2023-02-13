@@ -34,15 +34,14 @@
         </li>
 
         <li class="menu-item px-5">
-										<a class="dropdown-item px-5" href="{{ route('logout') }}"
-                                        onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-										</li>
+            <a class="dropdown-item px-5" href="{{ route('logout') }}"
+                 onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+            @csrf
+            </form>
+		</li>
     </ul>
 </nav>

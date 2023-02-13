@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('fasilitas_rumah');
             $table->string('harga');
             $table->unsignedBigInteger('id_tipe');
+            $table->string('foto_rumah');
             $table->foreign('id_tipe')->references('id')->on('tipe')
                 ->onDelete('cascade');
             $table->timestamps();

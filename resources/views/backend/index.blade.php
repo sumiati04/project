@@ -60,8 +60,7 @@
 					    <ul class="pcoded-submenu">
 					        <li><a href="{{route('tipe.index')}}" target="_blank">Data Tipe</a></li>
 					        <li><a href="{{route('perumahan.index')}}" target="_blank">Data Perumahan</a></li>
-                            <li><a href="{{route('pemesanan.index')}}" target="_blank">Data Pemesanan</a></li>
-                            <li><a href="{{route('promo.index')}}" target="_blank">Data Promo / Artikel</a></li>
+                            
 					    </ul>
 					</li>
 

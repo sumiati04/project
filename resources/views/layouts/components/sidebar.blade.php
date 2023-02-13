@@ -53,18 +53,7 @@
                             <p>Data Perumahan</p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="pemesanan" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Data Pemesanan</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="promo" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Data Promo / Artikel</p>
-                        </a>
-                    </li>
+                    
                 </ul>
             </li>
 </div>

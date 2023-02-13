@@ -7,7 +7,7 @@
             @include('layouts._flash')
             <div class="card border-secondary">
             <div class="card-header mb-3">Data Pemesan</div>
-                
+
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table align-middle" id="dataTable">
@@ -18,8 +18,8 @@
                                     <th>Email</th>
                                     <th>No HP</th>
                                     <th>Alamat</th>
-                                    <th>Action</th>
                                 </tr>
+
                             </thead>
                             <tbody>
                                 @php $no = 1; @endphp

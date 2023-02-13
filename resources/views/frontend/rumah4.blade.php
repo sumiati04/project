@@ -69,9 +69,9 @@
                     <a class="dropdown-item" href="{{url('/rumah5')}}">Type 90/100</a>
                   </div>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                   <a class="nav-link" href="{{url('/promo1')}}">Promo</a>
-                </li>
+                </li> --}}
               </ul>
             </div>
           </nav>
@@ -148,7 +148,7 @@
       </td>
     </tr>
   </table>
-  <center><a href="{{url('/forminfo')}}"><button type="button" class="btn btn-outline-dark">Info Lebih Lanjut</button></a></center>
+  {{-- <center><a href="{{url('/forminfo')}}"><button type="button" class="btn btn-outline-dark">Info Lebih Lanjut</button></a></center> --}}
   <br>
 
   <br>
@@ -214,68 +214,66 @@
       <td>Cartport : Rabat. Taman : Bunga dan Rumput</td>
     </tr>
   </table><br>
-  <center><a href="{{url('/forminfo')}}"><button type="button" class="btn btn-outline-dark">Info Lebih Lanjut</button></a></center>
+  {{-- <center><a href="{{url('/forminfo')}}"><button type="button" class="btn btn-outline-dark">Info Lebih Lanjut</button></a></center> --}}
   <br><br>
 
   <!--============================
 =            Footer            =
 =============================-->
 
-  <footer class="footer section section-sm">
+<footer class="footer section section-sm">
     <!-- Container Start -->
     <div class="container">
-      <div class="row">
-        <div class="col-lg-3 col-md-7 offset-md-1 offset-lg-0">
-          <!-- About -->
-          <div class="block about">
-            <!-- footer logo -->
-            <img src="{{asset('assets2/images/logoo.png')}}" height="150px" width="250px">
-            <!-- description -->
-            <!-- <p class="alt-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat.</p> -->
-          </div>
-        </div>
-        <!-- Link list -->
-        <div class="col-lg-2 offset-lg-1 col-md-3">
-          <div class="block">
-            <h4>Social Media</h4>
-            <ul class="elementor-icon-list-items">
-              <li class="elementor-icon-list-item">
-                <span class="elementor-icon-list-icon">
-                  <i class="bi bi-facebook"></i>
-                </span>
-                <span class="elementor-icon-list-text">Situtarate Residence</span>
-              </li>
-            </ul>
-            <ul class="elementor-icon-list-items">
-              <li class="elementor-icon-list-item">
-                <span class="elementor-icon-list-icon">
-                  <i class="bi bi-youtube"></i>
-                </span>
-                <span class="elementor-icon-list-text">Situtarate Residence</span>
-              </li>
-            </ul>
-            <ul class="elementor-icon-list-items">
-              <li class="elementor-icon-list-item">
-                <span class="elementor-icon-list-icon">
-                  <i class="bi bi-instagram"></i>
-                </span>
-                <span class="elementor-icon-list-text">Situtarate Residence</span>
-              </li>
-            </ul>
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-3 col-md-7 offset-md-1 offset-lg-0">
-                  <h4>FindUs</h4>
-                  <div class="col-lg-2 offset-lg-1 col-md-3">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5718.437534310721!2d107.59020571645648!3d-6.967173097664813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e8deccecb6f1%3A0x658cc60fbe5017b9!2sSMK%20Assalaam%20Bandung!5e0!3m2!1sid!2sid!4v1659770247231!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-7 offset-md-1 offset-lg-0">
+                <!-- About -->
+                <div class="block about">
+                    <!-- footer logo -->
+                    <img src="{{asset('assets2/images/logoo.png')}}" height="150px" width="250px">
+                    <!-- description -->
+                    <!-- <p class="alt-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p> -->
                 </div>
-              </div>
+            </div>
+            <!-- Link list -->
+            <div class="col-lg-2 offset-lg-1 col-md-3">
+                <div class="block">
+                    <h4>Social Media</h4>
+                    <ul class="elementor-icon-list-items">
+                        <li class="elementor-icon-list-item">
+                            <span class="elementor-icon-list-icon">
+                                <i class="bi bi-facebook"></i>
+                            </span>
+                            <span class="elementor-icon-list-text">Situtarate Residence</span>
+                        </li>
+                    </ul>
+                    <ul class="elementor-icon-list-items">
+                        <li class="elementor-icon-list-item">
+                            <span class="elementor-icon-list-icon">
+                                <i class="bi bi-youtube"></i>
+                            </span>
+                            <span class="elementor-icon-list-text">Situtarate Residence</span>
+                        </li>
+                    </ul>
+                    <ul class="elementor-icon-list-items">
+                        <li class="elementor-icon-list-item">
+                            <span class="elementor-icon-list-icon">
+                                <i class="bi bi-instagram"></i>
+                            </span>
+                            <span class="elementor-icon-list-text">Situtarate Residence</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <!-- Container End -->
-  </footer>
+            <div class="col-lg-3 col-md-7 offset-md-1 offset-lg-0">
+                <div class="col-lg-2 offset-lg-1 col-md-3">
+                    <h4 style="color:white ;">FindUs</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5718.437534310721!2d107.59020571645648!3d-6.967173097664813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e8deccecb6f1%3A0x658cc60fbe5017b9!2sSMK%20Assalaam%20Bandung!5e0!3m2!1sid!2sid!4v1659770247231!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+</footer>
   <!-- Footer Bottom -->
   <footer class="footer-bottom">
     <!-- Container Start -->

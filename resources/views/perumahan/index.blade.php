@@ -17,6 +17,7 @@
                             <th>Fasilitas Rumah</th>
                             <th>Harga</th>
                             <th>Tipe</th>
+                            <th>Foto Rumah</th>
                             <th>Action</th>
                         </thead>
                         <tbody>
@@ -28,6 +29,8 @@
                                 <td>{{ $data->fasilitas_rumah }}</td>
                                 <td>{{ $data->harga }}</td>
                                 <td>{{ $data->tipe->tipe_rumah }}</td>
+                                {{-- <td><img src="image/fotorumah" ></td> --}}
+                                <td><img src="{{ $data->image() }}" width="100" height="100"></td>
                                 <td>
                                     <form action="{{ route('perumahan.destroy', $data->id) }}" method="post">
                                         @csrf

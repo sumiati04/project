@@ -43,11 +43,6 @@
                         </div>
                         <div class="mb-3">
                             <label for="">ID Tipe</label>
-                            {{-- <select name="id_tipe" class="form-control @error('id_tipe') is-invalid @enderror" value="{{ $perumahan->id_tipe }}">
-                                @foreach ($perumahan as $data)
-                                    <option value="{{ $perumahan->id }}">{{ $perumahan->tipe->tipe_rumah }}</option>
-                                @endforeach
-                            </select> --}}
                             <select name="id_tipe" class="form-control @error('id_tipe') is-invalid @enderror">
                                 @php $no = 1; @endphp
                                 @foreach ($tipe as $data)
@@ -60,7 +55,20 @@
                             </span>
                             @enderror
                         </div>
-
+                        <div class="mb-3">
+                            <label class="from-label">Foto</label>
+                            @if (isset)
+                            <p>
+                                <img src="" alt="">
+                            </p>
+                            @endif
+                            <input type="file" class="form-control @error('foto') is-invalid @enderror"
+                            name="foto" value="{{ image/fotorumah }}">
+                            @error('foto')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         <div class="mb-3">
                             <div class="d-grid gap-2">
                                 <button class="btn btn-primary" type="submit">Save</button>

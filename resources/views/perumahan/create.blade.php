@@ -52,7 +52,15 @@
                             </span>
                             @enderror
                         </div>
-
+                        <div class="mb-3">
+                            <label for="">Foto</label>
+                            <input type="file" name="foto_rumah" class="form-control @error('foto_rumah') is-invalid @enderror"></input>
+                            @error('foto_rumah')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
                         <div class="mb-3">
                             <div class="d-grid gap-2">
                                 <button class="btn btn-primary" type="submit">Save</button>

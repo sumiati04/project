@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\TipeController;
+use App\Models\Perumahan;
 use App\Http\Controllers\PerumahanController;
 use App\Http\Controllers\PemesananController;
 use App\Http\Controllers\PromoController;
@@ -47,7 +48,8 @@ Route::get('/regiter1', function () {
 });
 
 Route::get('/beranda', function () {
-    return view('frontend.beranda');
+    $datas = Perumahan::all();
+    return view('frontend.beranda', compact('datas'));
 });
 
 Route::get('/rumah1', function () {

@@ -70,9 +70,7 @@
                                         <a class="dropdown-item" href="{{url('/rumah5')}}">Type 90/100</a>
                                     </div>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{url('/promo1')}}">Promo</a>
-                                </li>
+
                             </ul>
                         </div>
                     </nav>
@@ -146,104 +144,29 @@
                     <div class="col-12">
                         <!-- Section title -->
                         <div class="section-title">
-                            <h2>DENGAN 5 TYPE PILIHAN</h2>
+                            <h2>BEBERAPA TYPE PILIHAN</h2>
                         </div>
                         <div class="row">
                             <!-- Category list -->
+                            @foreach ($datas as $data)
+
                             <div class="col-lg-4 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
                                 <div class="category-block">
                                     <div class="header">
-                                        <img src="{{asset('assets2/images/rumah36.jpg')}}" height="200px" width="300px">
+                                        <img src="{{$data->image()}}" height="200px" width="300px">
                                     </div>
                                     <ul class="category-list">
-                                        <li>Luas 36/75</li>
-                                        <li>Dimensi 6 × 12.5 Meter</li>
-                                        <li>1 Lantai , 2 Carport</li>
-                                        <li>2 Kamar Tidur , 1 Kamar Mandi</li>
-                                        <li>1 Ruang Tamu , 1 Dapur</li>
-                                        <li>Air PDAM , Listrik 1300 watt</li>
+                                        <li>{{ $data->luas_rumah }}</li>
+                                        <li>{{ $data->fasilitas_rumah }}</li>
+                                        <li>{{ $data->harga }}</li>
+                                        <li>{{ $data->tipe->tipe_rumah }}</li>
                                     </ul><br>
                                     <center>
                                         <a href="{{url('/rumah1')}}"><button type="button" class="btn btn-outline-dark">Info Detail</button></a>
                                     </center>
                                 </div>
                             </div> <!-- /Category List -->
-                            <!-- Category list -->
-                            <div class="col-lg-4 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
-                                <div class="category-block">
-                                    <div class="header">
-                                        <img src="{{asset('assets2/images/rumah45.jpg')}}" height="200px" width="300px">
-                                    </div>
-                                    <ul class="category-list">
-                                        <li>Luas 45/84</li>
-                                        <li>Dimensi 7 × 12 Meter</li>
-                                        <li>1 Lantai , 2 Carport</li>
-                                        <li>2 Kamar Tidur , 1 Kamar Mandi</li>
-                                        <li>1 Ruang Tamu , 1 Dapur</li>
-                                        <li>Air PDAM , Listrik 1300 watt</li>
-                                    </ul><br>
-                                    <center>
-                                        <a href="{{url('/rumah2')}}"><button type="button" class="btn btn-outline-dark">Info Detail</button></a>
-                                    </center>
-                                </div>
-                            </div> <!-- /Category List -->
-                            <!-- Category list -->
-                            <div class="col-lg-4 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
-                                <div class="category-block">
-                                    <div class="header">
-                                        <img src="{{asset('assets2/images/rumah54.jpg')}}" height="200px" width="300px">
-                                    </div>
-                                    <ul class="category-list">
-                                        <li>Luas 54/75</li>
-                                        <li>Dimensi 6 × 12 Meter</li>
-                                        <li>2 Lantai , 2 Carport</li>
-                                        <li>2 Kamar Tidur , 2 Kamar Mandi</li>
-                                        <li>1 Ruang Tamu , 1 Dapur</li>
-                                        <li>Air PDAM , Listrik 1300 watt</li>
-                                    </ul><br>
-                                    <center>
-                                        <a href="{{url('/rumah3')}}"><button type="button" class="btn btn-outline-dark">Info Detail</button></a>
-                                    </center>
-                                </div>
-                            </div> <!-- /Category List -->
-                            <!-- Category list -->
-                            <div class="col-lg-4 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
-                                <div class="category-block">
-                                    <div class="header">
-                                        <img src="{{asset('assets2/images/rumah60.jpg')}}" height="200px" width="300px">
-                                    </div>
-                                    <ul class="category-list">
-                                        <li>Luas 60/84</li>
-                                        <li>Dimensi 7 × 12 Meter</li>
-                                        <li>2 Lantai , 2 Carport</li>
-                                        <li>2 Kamar Tidur , 2 Kamar Mandi</li>
-                                        <li>1 Ruang Tamu , 1 Dapur</li>
-                                        <li>Air PDAM , Listrik 1300 watt</li>
-                                    </ul><br>
-                                    <center>
-                                        <a href="{{url('/rumah4')}}"><button type="button" class="btn btn-outline-dark">Info Detail</button></a>
-                                    </center>
-                                </div>
-                            </div> <!-- /Category List -->
-                            <!-- Category list -->
-                            <div class="col-lg-4 offset-lg-0 col-md-5 offset-md-1 col-sm-6 col-6">
-                                <div class="category-block">
-                                    <div class="header">
-                                        <img src="{{asset('assets2/images/rumah90.jpg')}}" height="200px" width="300px">
-                                    </div>
-                                    <ul class="category-list">
-                                        <li>Luas 90/100</li>
-                                        <li>Dimensi 7 × 12 Meter</li>
-                                        <li>2 Lantai , 2 Carport</li>
-                                        <li>2 Kamar Tidur , 2 Kamar Mandi</li>
-                                        <li>1 Ruang Tamu , 1 Dapur</li>
-                                        <li>Air PDAM , Listrik 1300 watt</li>
-                                    </ul><br>
-                                    <center>
-                                        <a href="{{url('/rumah5')}}"><button type="button" class="btn btn-outline-dark">Info Detail</button></a>
-                                    </center>
-                                </div>
-                            </div> <!-- /Category List -->
+                            @endforeach
 
                         </div>
                     </div>
@@ -257,57 +180,57 @@
 =============================-->
 
         <footer class="footer section section-sm">
-            <!-- Container Start -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-7 offset-md-1 offset-lg-0">
-                        <!-- About -->
-                        <div class="block about">
-                            <!-- footer logo -->
-                            <img src="{{asset('assets2/images/logoo.png')}}" height="150px" width="250px">
-                            <!-- description -->
-                            <!-- <p class="alt-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat.</p> -->
-                        </div>
-                    </div>
-                    <!-- Link list -->
-                    <div class="col-lg-2 offset-lg-1 col-md-3">
-                        <div class="block">
-                            <h4>Social Media</h4>
-                            <ul class="elementor-icon-list-items">
-                                <li class="elementor-icon-list-item">
-                                    <span class="elementor-icon-list-icon">
-                                        <i class="bi bi-facebook"></i>
-                                    </span>
-                                    <span class="elementor-icon-list-text">Situtarate Residence</span>
-                                </li>
-                            </ul>
-                            <ul class="elementor-icon-list-items">
-                                <li class="elementor-icon-list-item">
-                                    <span class="elementor-icon-list-icon">
-                                        <i class="bi bi-youtube"></i>
-                                    </span>
-                                    <span class="elementor-icon-list-text">Situtarate Residence</span>
-                                </li>
-                            </ul>
-                            <ul class="elementor-icon-list-items">
-                                <li class="elementor-icon-list-item">
-                                    <span class="elementor-icon-list-icon">
-                                        <i class="bi bi-instagram"></i>
-                                    </span>
-                                    <span class="elementor-icon-list-text">Situtarate Residence</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Container End -->
-                    <div class="col-lg-3 col-md-7 offset-md-1 offset-lg-0">
-                        <div class="col-lg-2 offset-lg-1 col-md-3">
-                            <h4 style="color:white ;">FindUs</h4>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5718.437534310721!2d107.59020571645648!3d-6.967173097664813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e8deccecb6f1%3A0x658cc60fbe5017b9!2sSMK%20Assalaam%20Bandung!5e0!3m2!1sid!2sid!4v1659770247231!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                    </div>
+    <!-- Container Start -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-7 offset-md-1 offset-lg-0">
+                <!-- About -->
+                <div class="block about">
+                    <!-- footer logo -->
+                    <img src="{{asset('assets2/images/logoo.png')}}" height="150px" width="250px">
+                    <!-- description -->
+                    <!-- <p class="alt-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat.</p> -->
+                </div>
+            </div>
+            <!-- Link list -->
+            <div class="col-lg-2 offset-lg-1 col-md-3">
+                <div class="block">
+                    <h4>Social Media</h4>
+                    <ul class="elementor-icon-list-items">
+                        <li class="elementor-icon-list-item">
+                            <span class="elementor-icon-list-icon">
+                                <i class="bi bi-facebook"></i>
+                            </span>
+                            <span class="elementor-icon-list-text">Situtarate Residence</span>
+                        </li>
+                    </ul>
+                    <ul class="elementor-icon-list-items">
+                        <li class="elementor-icon-list-item">
+                            <span class="elementor-icon-list-icon">
+                                <i class="bi bi-youtube"></i>
+                            </span>
+                            <span class="elementor-icon-list-text">Situtarate Residence</span>
+                        </li>
+                    </ul>
+                    <ul class="elementor-icon-list-items">
+                        <li class="elementor-icon-list-item">
+                            <span class="elementor-icon-list-icon">
+                                <i class="bi bi-instagram"></i>
+                            </span>
+                            <span class="elementor-icon-list-text">Situtarate Residence</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Container End -->
+            <div class="col-lg-3 col-md-7 offset-md-1 offset-lg-0">
+                <div class="col-lg-2 offset-lg-1 col-md-3">
+                    <h4 style="color:white ;">FindUs</h4>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5718.437534310721!2d107.59020571645648!3d-6.967173097664813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e8deccecb6f1%3A0x658cc60fbe5017b9!2sSMK%20Assalaam%20Bandung!5e0!3m2!1sid!2sid!4v1659770247231!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
         </footer>
         <!-- Footer Bottom -->
         <footer class="footer-bottom">
@@ -316,14 +239,23 @@
                 <div class="row">
 
                     <div class="col-sm-6 col-12">
-                        <!-- Copyright -->
-                        <!-- <div class="copyright">
+                       <!-- Copyright -->
+                        <div class="copyright">
                             <p>Copyright © <script>
-                                    var CurrentYear = new Date().getFullYear()
-                                    document.write(CurrentYear)
-                                </script>. All Rights Reserved, theme by <a class="text-primary" href="https://themefisher.com" target="_blank">themefisher.com</a></p>
+                                var CurrentYear = new Date().getFullYear()
+                                document.write(CurrentYear)
+                            </script>. All Rights Reserved, theme by <a class="text-primary" href="https://themefisher.com" target="_blank">themefisher.com</a></p>
                         </div>
-                    </div> -->
+                        </div>
+                        <div class="col-sm-6 col-12">
+                            <!-- Social Icons -->
+                            <ul class="social-media-icons text-right">
+                              <li><a class="fa fa-facebook" href="https://www.facebook.com/themefisher" target="_blank"></a></li>
+                              <li><a class="fa fa-twitter" href="https://www.twitter.com/themefisher" target="_blank"></a></li>
+                              <li><a class="fa fa-pinterest-p" href="https://www.pinterest.com/themefisher" target="_blank"></a></li>
+                              <li><a class="fa fa-vimeo" href=""></a></li>
+                            </ul>
+                          </div>
                     </div>
                 </div>
                 <!-- Container End -->

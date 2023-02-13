@@ -30,13 +30,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
 </head>
 
 <body class="body-wrapper">
@@ -71,9 +64,7 @@
                                         <a class="dropdown-item" href="{{url('/rumah5')}}">Type 90/100</a>
                                     </div>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{url('/promo1')}}">Promo</a>
-                                </li>
+
                                  <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->
                         @guest
@@ -83,7 +74,7 @@
                         </li>
                         @endif
 
-                        
+
                         @else
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
