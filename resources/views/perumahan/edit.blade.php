@@ -9,7 +9,7 @@
                 <div class="card-header mb-3">Data Perumahan</div>
 
                 <div class="card-body">
-                    <form action="{{ route('perumahan.update', $perumahan->id) }}" method="post">
+                    <form action="{{ route('perumahan.update', $perumahan->id) }}" enctype="multipart/form-data" method="post">
                         @csrf
                         @method('put')
                         <div class="mb-3">
@@ -57,14 +57,16 @@
                         </div>
                         <div class="mb-3">
                             <label class="from-label">Foto</label>
-                            @if (isset)
+                            @if(isset($perumahan) && $perumahan->foto_rumah)
                             <p>
-                                <img src="" alt="">
+                                <img src="{{ asset('image/fotorumah/' . $perumahan->foto_rumah) }}"
+                                classs="img-rounded img-responsive" style="width: 75px; height:75px;"
+                                alt="">
                             </p>
                             @endif
-                            <input type="file" class="form-control @error('foto') is-invalid @enderror"
-                            name="foto" value="{{ image/fotorumah }}">
-                            @error('foto')
+                            <input type="file" class="form-control @error('foto_rumah') is-invalid @enderror"
+                            name="foto_rumah" value="{{ $perumahan->image() }}">
+                            @error('foto_rumah')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>

@@ -120,12 +120,12 @@ class PerumahanController extends Controller
             $image = $request->file('foto_rumah');
             $name = rand(1000, 9999) . $image->getClientOriginalName();
             $image -> move('image/fotorumah', $name);
-            $gallery->foto = $name;
+            $perumahan->foto_rumah = $name;
         }
         $perumahan->save();
         return redirect()->route('perumahan.index')->with(
             'succes',
-            'Data berhasil dibuat!'
+            'Data berhasil diedit!'
         );
     }
 

@@ -31,4 +31,4 @@ class Perumahan extends Model
             return unlink(public_path('image/fotorumah/' . $this->foto_rumah));
         }
     }
-}
+} 
